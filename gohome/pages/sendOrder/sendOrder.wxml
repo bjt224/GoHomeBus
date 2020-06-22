@@ -1,0 +1,98 @@
+<!-- 订单发布 -->
+<form bindsubmit='sendorder_submit'>
+  <view class="top-block" >
+    <view class='line-detail'>
+      <view class='title'>发车日期 :</view>
+      <view class='line-right'>
+        <text>{{date}}</text>
+        <picker mode="date" value="{{date}}" start="2018-10-01" end="3018-10-01" bindchange="bindDateChange">
+          <image src='../../image/date.png' class='date' ></image>
+        </picker>
+      </view>     
+    </view>
+    <view class='line-detail'>
+      <view class='title'>具体时间 :</view>
+      <view class='line-right'>
+        <text>{{time}}</text>
+        <picker mode="time" value="{{time}}" start="04:00" end="22:00" bindchange="bindTimeChange">
+          <image src='../../image/orderTime.png' class='date' ></image>
+        </picker>
+      </view>
+    </view>
+    <view class='line-detail'>
+      <view class='title'>票 数 :</view>
+      <view class='line-right'>
+        <input class='line-right-inp' id='amount' name="amount" type='number' placeholder='请输入票数！' value='{{amount}}'></input>
+      </view>
+    </view>
+    <view class='line-detail'>
+      <view class='title'>车牌:</view>
+      <view class='line-right'>
+        <input class='line-right-inp' id='carnum' name="carnum"  placeholder='请输入车牌号！' value='{{carnum}}'></input>
+      </view>
+    </view>
+    <view class='line-detail'>
+      <view class='title'>联系方式:</view>
+      <view class='line-right'>
+        <input class='line-right-inp' id='phone' name="phone" type='number'  placeholder='您的联系方式！' value='{{phone}}'></input>
+      </view>
+    </view>
+    <view class='line-detail'>
+      <view class='title'>是否跟车:</view>
+      <view class='line-right'>
+        <radio-group class="radio-group" bindchange="radioChange">          
+          <radio value="{{true}}"/>是
+          <radio value="{{false}}" checked="{{true}}" />否
+        </radio-group>
+      </view>
+    </view>
+    <view class='line-detail'>
+      <view class='title'>司机电话:</view>
+      <view class='line-right'>
+        <input class='line-right-inp' id='phones' name="phones" type='number'  placeholder='司机联系方式！' value='{{phones}}'></input>
+      </view>
+    </view>
+    <view class='line-detail'>
+      <view class='title'>上车地点:</view>
+      <view class='line-right' bindtap='choosestart'>
+        <text id='destination'>{{start.name}}</text>
+      </view>
+    </view>
+    <view class='line-detail'>
+      <view class='title'>上车点描述:</view>
+      <view class='line-right'>
+        <textarea placeholder='请填写详细上车点描述' maxlength='100' bindinput="wordsChange" id="content">
+          <view class='words'>{{words}}/100</view>
+        </textarea>
+      </view>
+    </view>
+    <view class='line-detail'>
+      <view class='title'>相片描述:</view>
+      <view class='line-right' style='text-align: left;'>
+        <image wx:for="{{lists}}" class='add-photo' src='{{item}}' wx:key="{{index}}" id='{{index}}' bindlongpress='longDelete' bindtap='previewImg'></image>
+        <image wx:if="{{lists.length < 3}}" src='../../image/add.png' bindtap='chooseImage' class='add-photo'></image>
+      </view>
+    </view>
+    <view class='line-detail'>
+      <view class='title'>下车地点:</view>
+       <view class='line-right' >
+        <image src='../../image/add2.png' class='add' bindtap='addSite'></image>
+        <view class='site' wx:for="{{offSite}}" wx:key="offSite" >
+          <view class='off-site-list' data-index='{{index}}' bindtap='chooseend' >
+            <image src='../../image/off-site.png' class='site-icon'></image>
+            <view class='site-text'>{{item.name}}</view>
+          </view>
+          <view class="off-site-list" >
+            <image src='../../image/money.png' class='site-icon money' ></image>
+            <input id='jiage' data-index='{{index}}' name="jiage" type='number' bindblur='inputMoney' placeholder='输入票价（单价/元）！' value='{{item.jiage}}'></input>
+          </view>
+          <icon type='cancel'size="15" class='icon-del' catchtap='delSite' data-index='{{index}}' ></icon>
+        </view>
+      </view>
+    </view>
+    <button type='primary' form-type="submit" >发布</button>
+  </view>
+</form>
+
+
+

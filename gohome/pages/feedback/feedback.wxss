@@ -1,0 +1,53 @@
+/* pages/feedback/feedback.wxss */
+page {
+  background: #eee;
+  font-size: 30rpx;
+}
+.phone {
+  display: flex;  
+  background: white;
+  padding: 5rpx;
+
+}
+.title {
+  margin:10rpx ; 
+}
+textarea {
+  margin-top: 20rpx;
+  background: white;
+  width: 700rpx;
+  height: 400rpx;
+  padding: 20rpx 30rpx;
+  margin-bottom: 10rpx;
+}
+.words {
+  position: absolute;
+  bottom: 10rpx;
+  right: 30rpx;
+  color: #777;
+  font-size: 25rpx;
+}
+form button {
+  position: absolute;
+  bottom: 0rpx;
+  width: 100%;
+}
+.photo-title {
+  display: flex;
+  margin-left: 10rpx;
+}
+.phone input {
+  padding-left: 10rpx;
+  margin-top: 10rpx;
+}
+.photo-title text {
+  color: #777;
+  font-size: 25rpx;
+  margin-top:15rpx;
+  margin-left:10rpx;  
+}
+.add {
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 20rpx;
+}

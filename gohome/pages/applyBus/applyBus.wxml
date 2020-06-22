@@ -1,0 +1,36 @@
+<!--车社申请-->
+<form  bindsubmit="application_carclub_submit">
+  <view class='apply-form'>
+    <view class='line'>
+      <view class='title'>本人姓名：</view>
+      <input name="username" placeholder='请输入您的真实姓名'></input>
+    </view>
+    <view class='line'>
+      <view class='title'>邀请密钥：</view>
+      <input name="inviteCode" value='{{inviteCode}}' placeholder='填入注册邀请密钥' bindblur='checkCode'></input>
+    </view>
+    <view class='line'>
+      <view class='title'>车社名称：</view>
+      <input name="carclubname"   placeholder='请输入您的车社名称'></input>
+    </view>
+    <view class='line'>
+      <view class='title'>联系电话：</view>
+      <input name="phone" type='number' placeholder='请填写您的有效电话'></input>
+    </view>
+    <view class='line'>
+      <view class='title'>车社标志：</view>
+      <image src="{{logo}}" class='logo' bindtap='chooseLogo'></image>
+      <image wx:if="{{logo==''}}" src='../../image/add.png' bindtap='chooseLogo' class='add-photo'></image>
+    </view>
+    <view class='line'>
+      <view class='title'>车社简介：</view>
+      <textarea name="content" placeholder='请填写车社简介让乘客更方便了解你们'></textarea>
+    </view>
+    <view class='line'>
+      <view class='title'>身份证明：</view>
+      <image wx:for="{{idCard}}" class='add-photo' src='{{item}}' wx:key="{{index}}" id='{{index}}' bindlongpress='longDelete' bindtap='previewImg'></image>
+      <image wx:if="{{idCard.length < 2}}"  src='../../image/add.png' bindtap='chooseImage' class='add-photo'></image>
+    </view>
+    <button type='primary' form-type="submit" hover-class="none" >申请</button>
+  </view>
+</form>

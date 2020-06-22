@@ -1,0 +1,26 @@
+/* pages/setting/setting.wxss */
+page {
+  background: #eee;
+}
+.changePhone {
+  position: relative;
+  height: 70rpx;
+  margin-top: 20rpx;
+  background: white;
+}
+.changePhone text {
+  position: absolute;
+  top: 10rpx;
+  left: 20rpx;
+}
+.changePhone image {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+.log-out {
+  margin-top: 10rpx;
+  width: 96%;
+}

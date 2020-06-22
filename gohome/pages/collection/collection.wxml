@@ -1,0 +1,8 @@
+<!-- 个人收藏页面 -->
+<block wx:for="{{carclub}}"  wx:for-index="index" wx:key="unique">
+  <view class='mark-list' bindtap='navTOinfo' id="{{item._id}}">
+    <image src='{{item.logo}}' class='logo'></image>
+    <view class='bus-name'>{{item.carclubname}}</view>
+    <image src='../../image/{{markStatus}}.png' class='mark' bindtap='nomark'></image>
+  </view>
+</block>

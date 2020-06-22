@@ -1,0 +1,48 @@
+/* pages/applyPrincipal/applyPrincipal.wxss */
+page {
+  background: #eee;
+  padding-top: 10rpx;
+}
+.bg {
+  border-radius: 20rpx;
+  background: white;
+  width: 95%;
+  padding: 10rpx;
+  margin: auto;
+  font-size: 35rpx;
+}
+picker image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.apply-information {
+  text-align: center;
+  margin: 20rpx;
+  display: flex;
+}
+.apply-information input {
+  padding-left:10rpx; 
+  border-bottom: 1rpx solid #eee;
+}
+.bus-name{
+ padding-left:10rpx; 
+ color: #777;
+ width: 400rpx;
+ border-bottom: 1rpx solid #eee;
+}
+
+.apply-information textarea {
+  width: 400rpx;
+  text-align: left;
+  border: 1rpx #eee solid;
+  border-radius: 5%;
+  padding: 10rpx;
+}
+button {
+  width: 98%;
+}
+.title { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

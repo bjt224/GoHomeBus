@@ -1,0 +1,49 @@
+<!-- 个人订单列表  -->
+<block wx:if="{{order.length>0}}">
+ <view wx:for="{{order}}" wx:for-index="index" wx:key="unique" wx:for-item="order" class='item-block' >
+    <view class='order-block' id='{{order._id}}' data-index='{{index}}' data-site='{{personorder[index].xianlu_i}}' bindtap='navTOqiandao'  bindtouchstart='sTouch' bindtouchmove='mTouch' bindtouchend='eTouch' style='{{order.txtStyle}}'>
+      <view class='block-left'>
+        <image src='{{order.photo}}'></image>
+      </view>
+      <view class='block-right'>
+        <view class='block-right'>
+          <view>
+            <text class="bus-name">{{order.name}}</text>
+            <text class='status' wx:if='{{personorder[index].tag==0}}'>待签到</text>
+            <text class='status'wx:else>已签到</text>
+          </view>
+          <view class='detail-list'>
+            <image src='../../image/time.png' class='icon'></image>
+            <view class='detail-text'>{{order.date}} {{order.time}}</view>
+          </view>
+          <view class='detail-list'>
+            <image src='../../image/plateNumber.png' class='icon'></image>
+            <view class='detail-text'>{{order.carnum}}</view>
+          </view>
+          <view class='detail-list'>
+            <image src='../../image/get-on.png' class='icon'></image>
+            <view class='detail-text'>{{order.start_name}}</view>
+          </view>
+          <view class='detail-list'>
+            <image src='../../image/get-off.png' class='icon'></image>
+            <view class='detail-text'>{{order.end_list[personorder[index].xianlu_i].name}}</view>
+          </view>
+        </view>
+      </view>
+    </view>    
+    <view class='refund' catchtap='unorder' data-club='{{order.carclub_id}}' data-orderid='{{order._id}}' id="{{personorder[index]._id}}">取消订单</view>
+  </view>
+</block>
+<block wx:else>
+  <view class='none-block'>
+        <image src='../../image/clogo.png'></image>
+      <view class='none-text'>    
+        <view>暂无</view>
+        <view class='text-word'>订单</view>
+      </view>
+      <view class='toindex'>去首页看看</view>
+      <button bindtap='toIndex' >首页</button>
+  </view>
+</block>
+
+

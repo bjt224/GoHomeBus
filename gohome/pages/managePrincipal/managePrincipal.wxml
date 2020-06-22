@@ -1,0 +1,19 @@
+<!-- 负责人管理模块 -->
+<view class=" order-block">
+  <view class=" order-row" id="/pages/ongoingOrder/ongoingOrder" bindtap='TosendOrder'>
+    <image src='../../image/underway-order.png' class='icon'></image>
+    <text>正在进行订单</text>
+    <image src='../../image/detail.png' class='detail'></image>
+  </view>
+  <view class=" order-row" id="/pages/orderHistory/orderHistory" bindtap='TosendOrder'>
+    <image src='../../image/history-order.png' class='icon'></image>
+    <text>历史订单</text>
+    <image src='../../image/detail.png' class='detail'></image>
+  </view>
+  <view class=" order-row" id="/pages/sendOrder/sendOrder" bindtap='TosendOrder'>
+    <image src='../../image/send-order.png' class='icon'></image>
+    <text>发布订单</text>
+    <image src='../../image/detail.png' class='detail'></image>
+  </view>
+</view>
+<button type='warn' bindtap='lizhi'>离职</button>

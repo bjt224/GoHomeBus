@@ -1,0 +1,65 @@
+/* pages/applyBus/applyBus.wxss */
+page {
+  background: #eee;
+  padding-top:20rpx; 
+  font-size: 35rpx;
+}
+.apply-form {
+  padding: 10rpx 20rpx;
+  width: 90%;
+  margin: auto;
+  border-radius: 2%;
+  background: white;
+}
+.title { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 150rpx;
+  height: 150rpx;
+  margin:auto; 
+  border-radius: 50%;
+  border: 1rpx #eee dashed;
+}
+.card{
+  width: 200rpx;
+  height: 100rpx;
+}
+.line {
+  margin-top: 20rpx;
+  display: flex; 
+}
+.line button {
+  margin-top: 20rpx;
+  height:50rpx;
+  font-size:25rpx;
+}
+.line input {
+  text-align: center;
+  padding-top: 10rpx;
+  padding-left:10rpx; 
+  border-bottom: 1rpx solid #eee;
+  color: #777;
+}
+.line textarea {  
+  width: 430rpx;
+  border-radius: 3%;
+  border: 1rpx #eee solid;
+  margin-bottom: 20rpx;
+  color: #777;
+  padding: 10rpx;
+}
+.add-photo {
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 10rpx;
+  margin: auto;
+}
+button {
+  margin-top: 30rpx;
+}
+progress {
+  margin-top: 20rpx;
+}

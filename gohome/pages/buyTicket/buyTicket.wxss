@@ -1,0 +1,107 @@
+/* pages/buyTicket/buyTicket.wxss */
+page {
+  background: #eee;
+}
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 500rpx;
+}
+.block-detail {
+  position: relative; 
+  top: 30rpx;
+  width: 90%;
+  border-radius:20rpx;
+  margin:auto;
+  background:white;  
+  padding: 10rpx;
+}
+.detail-top {
+  display: flex;
+  padding:  30rpx 5rpx 10rpx 20rpx;
+}
+.detail-top text {
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  font-size: 35rpx;
+}
+.date {
+  font-size: 50rpx;
+  margin-right: 20rpx;
+}
+.detail-list {
+  display: flex;
+  padding: 10rpx;
+  font-size: 35rpx;
+}
+.block-bottom {
+  margin-top: 20rpx; 
+  display: flex;
+}
+.icon{
+  width: 28rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  margin: 10rpx 20rpx 0rpx 15rpx;
+}
+.bus-icon {
+  height: 50rpx;
+  width: 50rpx;
+  margin: 5rpx 20rpx 0rpx 20rpx;
+}
+.bus-detail {
+  display: flex;
+}
+.block-message {
+  top: 60rpx;
+  background:white;
+  position: relative;
+  width: 86%;
+  margin: 20rpx auto;
+  border-radius: 20rpx;
+  padding: 25rpx;
+}
+.message-title {
+  font-size: 50rpx;
+  height: 100rpx;
+  border-bottom: 1rpx #eee solid; 
+}
+
+.block-bottom {
+  height: 150rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+  background: white;
+}
+.total {
+  font-size: 45rpx;
+  margin: 40rpx 70rpx;
+  color: #777; 
+}
+.sub {
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+  width: 250rpx;
+  height: 60rpx;
+  background: #7878a8;
+  border-radius: 40rpx;
+  padding-top: 5rpx;
+  color: white;
+  text-align: center;
+}
+.message-list {
+  display: flex;
+  margin: 20rpx 0rpx;
+}
+.message-list view {
+  width: 30%;
+  font-size: 40rpx;
+  text-align: center;
+}
+.message-list input {
+  width: 70%;
+  margin-top: 7rpx;
+  padding-left: 20rpx;
+}

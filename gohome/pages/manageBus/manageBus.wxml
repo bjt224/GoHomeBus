@@ -1,0 +1,63 @@
+ <!-- 车社管理页面 -->
+<view class=" message-block">
+  <view class='block-top'>
+    <image src="{{carclub.logo}}" class='logo'></image>
+    <view class="clubname">{{carclub.carclubname}}</view>
+    <image src='../../image/change.png' class='change'></image>
+  </view>
+  <view class="row">
+    <view class='row-title'>主要负责人：</view>
+    <view class='detail'>{{carclub.username}}</view>
+  </view>
+  <view class='row'>
+    <view class='row-title'>联系电话 ：</view>
+    <view class='detail'>{{carclub.phone}}</view>
+  </view>
+</view>
+<view class='message-block'>
+  <view class="title">
+    <text>车 社 简 介</text>
+    <image src='../../image/change.png' class='change' bindtap='changeIntro'></image>
+  </view>
+  <view wx:if='{{!changeIntro}}'  class='intro' >{{carclub.summary}}</view>
+  <textarea wx:else focus='true' value='{{carclub.summary}}' bindblur='changeIntroSucc'></textarea>
+</view>
+<view class='message-block'>
+  <view class="title">
+    <text>主 要 站 点</text>
+    <image src='../../image/add2.png' class='add' bindtap='addItem'></image>
+  </view>
+  <view  class='detail-block' wx:if='{{lists.lenght != 0}}'>
+    <view class='row-block' wx:for="{{lists}}" wx:key='{{index}}' >
+      <view class="{{index %2 ==0 ?'green' : 'orange'}}"></view>
+      <view class='row-text' bindtap='choiceSite' data-id='{{index}}' >{{item.name}}</view>   
+      <image src='../../image/delete.png' data-id='{{index}}'  class='delete' bindtap='deleteItem'></image>
+    </view>
+    <view style='clear:both;'></view>
+  </view>
+  <button wx:if="{{!saveSucc}}" type='primary' class='save-site' bindtap='saveSucc'>保存</button>
+</view>
+<view class='message-block'>
+  <view class="title">负责人列表</view>
+  <view class='select' >
+    <view class='tab {{currentData == 0 ? "tabBorer" : ""}}' bindtap='checkCurrent' data-current="0">已任职</view>
+    <view class='tab {{currentData == 1 ? "tabBorer" : ""}}' bindtap='checkCurrent' data-current="1" >待审核</view>
+  </view>
+  <swiper  current="{{currentData}}" bindchange='swiperchange'  style='height:{{currentData ==0? admin.length*170:unadmin.length*170}}rpx'>
+    <swiper-item>
+      <view  wx:for="{{admin}}"  wx:for-index="index" wx:key="unique" class='leader-list' data-id='{{item._id}}' bindtap='toPriDetail'>
+        <image class='photo' src='{{item.photo}}'></image>
+        <view class='leader-name'>{{item.name}}</view>
+        <image class='detail-logo' src='../../image/detail.png'></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view  wx:for="{{unadmin}}"  wx:for-index="index" wx:key="unique" class='leader-list' data-id='{{item._id}}' bindtap='toCheck'>
+        <image class='photo' src='{{item.photo}}'></image>
+        <view class='leader-name'>{{item.name}}</view>
+        <image class='detail-logo' src='../../image/detail.png'></image>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+

@@ -1,0 +1,70 @@
+<!--历史订单详情-->
+<image class='bg' src='../../image/bg.png'></image> 
+<view class='block-detail'>
+  <view class='detail-top'>
+    <view class='title'>出发时间</view>
+    <view class='date'>{{order.date}} {{order.time}}</view>
+  </view>
+  <view class='bus-detail'>
+    <view class="title">车牌号码</view>
+    <image src='../../image/phone2.png' id="{{order.phones}}" bindtap='getphone' class='call'></image>
+    <view class='plateNumber'>{{order.carnum}}</view>
+  </view>
+  <view class='detail-list'>
+    <view class='start-site'></view>
+    <view class='start-site-text'>上下车点</view>
+  </view>
+  <view class='detail-list'>
+    <image src='../../image/on-site2.png' class='icon'></image>
+    <view class='detail-text wordLimit' style='width:90%'>{{order.start_name}}</view>
+  </view>
+  <view wx:for="{{order.end_list}}"  wx:for-index="index" wx:key="unique" wx:for-item="end" class='detail-list'>
+    <image src='../../image/off-site2.png' class='icon'></image>
+    <view class='detail-text wordLimit'>{{end.name}}</view>
+    <view class='univalence'>{{end.jiage}}(￥/人) * {{siteNum[index]}} 人</view>
+  </view>
+  <view class='block-bottom'>
+    <view class='ratio'>
+      <view class='sell'>{{order.soldticket}}</view>
+      <view class='amount'>{{order.amount}}</view>
+    </view>
+    <view class='money'>
+      <view class='textCenter'>预计车费收入：{{allmoney}}￥</view>
+      <view class='textCenter'>付款情况：{{sumPay}}/{{order.soldticket}}</view>
+      <view class='textCenter'>签到情况：{{sumOnBus}}/{{order.soldticket}}</view>
+    </view>
+  </view>
+</view>
+<view >
+  <view class='block-user'>
+    <view class='passenger-title textCenter'>
+      <image src='../../image/user.png'></image>
+      <view>乘客列表</view>
+    </view>
+    <view class='passenger-list'>
+      <view class='passenger-item textCenter'>姓名</view>
+      <view class='passenger-item textCenter'>下车地点</view>
+      <view class='passenger-item textCenter'>状态</view>
+      <view class='passenger-item textCenter'>付款状态</view>
+    </view>
+    <view wx:if="{{order.soldticket>=1}}">
+      <view wx:for="{{personal}}"  wx:key="unique" wx:for-item="personal" class='passenger-list' data-phone='{{personal.phone}}' bindtap='getphone'>
+        <view class='item-block' data-index="{{index}}">
+          <view class='passenger-item1 textCenter' >{{personal.nickname}}</view>
+          <view class='passenger-item1 textCenter'><view class="wordLimit">{{order.end_list[personal.xianlu_i].name}}</view></view>
+          <view class='passenger-item1 textCenter' wx:if="{{personal.tag == 1}}">已上车</view>
+          <view class='passenger-item1 textCenter' wx:else>待上车</view>
+          <icon class='passenger-item1 textCenter' type='success' size='20' data-index="{{index}}" data-orderid='{{personal._id}}'  wx:if="{{personal.paystatus}}"></icon>
+          <icon class='passenger-item1 textCenter' size='20'  type='warn'data-index="{{index}}" data-orderid='{{personal._id}}'  wx:else></icon>
+        </view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class='block-user'>
+        <view  class='passenger-list'>
+        暂时没有乘客买票
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

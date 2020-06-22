@@ -1,0 +1,35 @@
+<!-- 历史订单 -->
+<view wx:if="{{order.length == 0}}">
+暂无历史订单，请去发布吧
+</view>
+<view wx:else>
+  <view wx:for="{{order}}"  wx:key="unique" class='order-block' id="{{item._id}}" bindtap='toDetailPage'>
+    <view class='block-left'>
+      <image src='{{item.photo}}'></image>
+    </view>
+    <view class='block-right'>
+      <view class='title-detail'>
+        <text class="bus-name">{{item.name}}</text>
+        <image src='../../image/detail.png'></image>
+        <text wx:if="{{item.tag == 0 }}" class='status'>进行中···</text>
+        <text wx:else class='status'>已完成</text>
+      </view>
+      <view class='detail-list'>
+        <image src='../../image/time.png' class='icon'></image>
+        <view class='detail-text'>{{item.date}} {{item.time}}</view>
+      </view>
+      <view class='detail-list'>
+        <image src='../../image/plateNumber.png' class='icon'></image>
+        <view class='detail-text'>{{item.carnum}}</view>
+      </view>
+      <view class='detail-list'>
+        <image src='../../image/get-on.png' class='icon'></image>
+        <view class='detail-text'>{{item.start_name}}</view>
+      </view>
+      <view wx:for="{{item.end_list}}"  wx:for-index="index" wx:key="unique" wx:for-item="end" class='detail-list'>
+        <image src='../../image/get-off.png' class='icon'></image>
+        <view class='detail-text'>{{end.name}}</view>
+      </view>
+    </view>
+  </view> 
+</view>

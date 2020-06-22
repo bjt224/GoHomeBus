@@ -1,0 +1,39 @@
+/* pages/managePrincipal/managePrincipal.wxss */
+page {
+  background: #eee;
+}
+.order-block {
+  background: white;
+  padding: 10rpx;
+}
+.order-row {
+  position: relative;
+  height: 80rpx;
+  border-bottom: 1rpx #eee solid;
+}
+.order-row text {
+  position: absolute;
+  top: 15rpx;
+  left: 100rpx;
+}
+.icon {
+  position: absolute;
+  left: 20rpx;
+  top: 15rpx;
+  height: 50rpx;
+  width: 50rpx;
+
+}
+.detail {
+  position: absolute;
+  right: 10rpx;
+  top: 15rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+button {
+  position: absolute;
+  bottom: 0rpx;
+  width: 98%;
+  margin:10rpx 7rpx;
+}

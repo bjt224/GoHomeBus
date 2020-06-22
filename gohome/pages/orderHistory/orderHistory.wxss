@@ -1,0 +1,2 @@
+/* pages/orderHistory/orderHistory.wxss */
+@import '/pages/ongoingOrder/ongoingOrder.wxss';

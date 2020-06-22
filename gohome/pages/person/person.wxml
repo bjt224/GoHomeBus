@@ -1,0 +1,69 @@
+<!--个人页面-->
+<view class='header'> 
+    <block wx:if="{{loginStatus}}">
+      <view class='rahmen'>
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName" class='userName'></open-data>
+    </block>
+    <block wx:else>
+      <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class='login-button'>授权登录</button>
+      <view wx:else  class='login-button'>请升级微信版本</view>
+    </block>
+</view>
+<view class='user-subfield'>
+  <view class='subfield' bindtap='handleNavigateTotab' id="privateOrder" >
+    <image  src='../../image/order2.png' class='my-icon' ></image>
+    <view class='title'>我的订单</view>
+    <image src='../../image/detail.png' class='details' ></image>
+  </view>
+  <view class='subfield' bindtap='handleNavigateTo' id="collection">
+    <image  src='../../image/enshrine.png' class='my-icon' ></image>
+    <view class='title'>我的收藏</view>
+    <image src='../../image/detail.png' class='details' ></image>
+  </view>
+  <view class='subfield'bindtap='handleNavigateTo' id="feedback">
+    <image  src='../../image/opinion.png' class='my-icon' ></image>
+    <view class='title'>意见反馈</view>
+    <image src='../../image/detail.png' class='details' ></image>
+  </view>
+  <view class='subfield' bindtap='handleNavigateTo' id="setting">
+    <image  src='../../image/setting.png' class='my-icon' ></image>
+    <view class='title'>设置</view>
+    <image src='../../image/detail.png' class='details' ></image>
+  </view>
+  <view class='subfield-bottom' bindtap='handleNavigateTo' id="service">
+    <image  src='../../image/service.png' class='my-icon' ></image>
+    <view class='title'>联系客服</view>
+    <image src='../../image/detail.png' class='details' ></image>
+  </view>
+</view>
+<view class='admin-subfield'>
+ <view wx:if="{{is_admin == 1}}" class='subfield' bindtap='managePrincipalTo' id="managePrincipal">
+      <image  src='../../image/principal.png' class='my-icon' ></image>
+      <view class='title'>订单管理</view>
+      <image src='../../image/detail.png' class='details' ></image>
+  </view>
+  <view wx:elif="{{is_admin == 2}}" class='subfield' bindtap='handleNavigateTo' id="applyPrincipal">
+      <image  src='../../image/principal.png' class='my-icon' ></image>
+      <view class='title'>代理人申请</view>
+      <image src='../../image/detail.png' class='details' ></image>
+  </view>
+  <view wx:elif="{{is_admin == 3}}" class='subfield'>
+      <image  src='../../image/principal.png' class='my-icon' ></image>
+      <view class='title'>审核中····</view>
+      <image src='../../image/detail.png' class='details' ></image>
+  </view>
+
+  <view  wx:if="{{is_carclub==1}}"  class='subfield-bottom' bindtap='handleNavigateTo' id="manageBus">
+    <image  src='../../image/Trolleybus.png' class='my-icon' ></image>
+    <view class='title'>车社管理</view>
+    <image src='../../image/detail.png' class='details' ></image>
+  </view>
+  <view wx:else class='subfield-bottom' bindtap='handleNavigateTo' id="applyBus">
+    <image  src='../../image/Trolleybus.png' class='my-icon' ></image>
+    <view class='title'>车社申请注册</view>
+    <image src='../../image/detail.png' class='details' ></image>
+  </view>
+</view>
+<image src='../../image/logo.png' style='height:100rpx;width:100%;margin-top:10rpx'></image>

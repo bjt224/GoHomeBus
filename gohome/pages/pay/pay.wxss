@@ -1,0 +1,16 @@
+/* pages/pay/pay.wxss */
+page{
+  height: 100%;
+}
+swiper{
+  height: 90%;
+}
+swiper-item image{
+  width: 100%;
+  height: 90%;
+}
+view{
+  text-align: center;
+  color: #777;
+  padding: 0rpx 20rpx;
+}

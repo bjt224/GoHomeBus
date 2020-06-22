@@ -1,0 +1,21 @@
+<!-- 意见反馈页面 -->
+<form>
+  <view class='phone'>
+    <view class='title'>手机号码</view>
+    <input type='number' name="phone" bindchange="phone" placeholder='请输入您的手机号码'></input>
+  </view>
+  <textarea maxlength='300' placeholder='您留下的每个字都将帮助改善我们的产品，期待您的反馈！(内容不得少于5个字)'bindinput="wordsChange">
+    <view class='words'>{{words}}/300</view>
+  </textarea>
+  <view class='photo-title'>
+    <view class='title'>上传凭证</view>
+    <text>{{lists.length}}/3</text>
+  </view>
+  <view class='photo'>
+    <image wx:for="{{lists}}" class='add' src='{{item}}' wx:key="{{index}}" id='{{index}}' bindlongpress='longDelete' bindtap='previewImg'></image>
+    <image wx:if="{{lists.length < 3}}" class='add' src='../../image/add.png' bindtap='chooseImage'></image>
+  </view> 
+  <button wx:if="{{tijiao == 0}}" type='primary' bindtap='feedback_form'>提交</button>
+  <button wx:if="{{tijiao == 1}}" type='primary' >提交中···</button>
+</form>
+

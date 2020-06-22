@@ -1,0 +1,69 @@
+<!--用户订单详情-->
+<image class='bg' src='../../image/bg.png'></image> 
+<view class='block-detail'>
+  <view class='detail-top'>
+    <view class='date'>{{order.date}}</view>
+    <view class='date'>{{order.time}}</view>
+    <text>订单状态</text>
+  </view>
+  <view class='bus-detail'>
+    <image src='../../image/bus.png' class='bus-icon'></image>
+    <view class='plateNumber'>{{order.carnum}}</view>
+  </view>
+  <view class='detail-list'>
+    <image src='../../image/get-on.png' class='site-icon'></image>
+    <view class='detail-text'>{{order.start_name}}</view>
+  </view>
+  <view class='detail-list'>
+    <image src='../../image/get-off.png' class='site-icon'></image>
+    <view class='detail-text'>{{order.end_list[indexs].name}}</view>
+  </view>
+</view>
+<view class='list-block'>
+  <view class='title'>
+    <image src='../../image/plateNumber.png'></image>
+    <text>车社信息</text>
+  </view>
+  <view class='list-detail'>
+    <text>{{carclub.name}}</text>
+    <view class='principal-block'>
+      <image src="../../image/principal(2).png"></image>
+      <view class='principal-name'>此次班车负责人 ： {{admin.name}}</view>
+    </view>   
+    <image src='../../image/phone.png' class='call' bindtap='getphone' id="{{admin.phone}}"></image>
+  </view>
+</view>
+<view class='list-block'>
+  <view class='title'>
+    <image src='../../image/evaluate.png'></image>
+    <text>体验评价</text>
+  </view>
+  <view wx:if="{{is_comment == 0}}" class='evaluate-detail'>
+    <view class='detail-block'>
+      <image src='../../image/good.png' id="100" bindtap='comment' class='evaluate'></image>
+      <text>十分满意</text>
+    </view>
+    <view class='detail-block'>
+      <image src='../../image/ordinary.png' id="80" bindtap='comment' class='evaluate'></image>
+      <text>一般</text>
+    </view>
+    <view class='detail-block'> 
+      <image src='../../image/bad.png' id="60"  bindtap='comment' class='evaluate'></image>
+      <text>差劲</text>
+    </view>    
+  </view>
+  <view wx:else if="{{is_comment != 0}}" class='evaluate-detail'>
+    <view class='detail-block save' wx:if="{{is_comment == 100}}">
+      <image src='../../image/good.png' id="100"  class='evaluate'></image>
+      <text>十分满意</text>
+    </view>
+    <view class='detail-block save'  wx:if="{{is_comment == 80}}">
+      <image src='../../image/ordinary.png' id="80"  class='evaluate'></image>
+      <text>一般</text>
+    </view>
+    <view class='detail-block save'  wx:if="{{is_comment == 60}}"> 
+      <image src='../../image/bad.png' id="60"   class='evaluate'></image>
+      <text>差劲</text>
+    </view>    
+  </view>
+</view>

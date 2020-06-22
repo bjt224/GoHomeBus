@@ -1,0 +1,23 @@
+<!-- 负责人详细信息 -->
+<view class='message-block'>
+  <view class='block-top'>
+      <image src='{{admin.photo}}' class='profile-photo'></image>
+  </view>
+  <view class='block-list'>
+    <view class='list-title'>姓 名：</view>
+    <view class='list-detail'>{{admin.name}}</view>
+  </view>
+  <view class='block-list'>
+    <view class='list-title'>联系电话：</view>
+    <view class='list-detail' id="{{admin.phone}}" bindtap='getphone'>{{admin.phone}}</view>
+    <!-- <image src='../../image/phone.png' class='call' ></image> -->
+  </view>
+  <view class='block-list'>
+    <view class='list-title'>职 业：</view>
+    <view class='list-detail'>{{admin.identity}}</view>
+  </view>
+  <view class='block-list'>
+    <view class='list-title'>简 介：</view>
+    <view class='list-detail intro'>{{admin.introduction}}</view>
+  </view>
+</view>

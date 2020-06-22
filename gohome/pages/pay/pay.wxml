@@ -1,0 +1,13 @@
+<!-- 付款显示页面 -->
+<swiper indicator-dots="true">
+  <swiper-item>
+    <image src='../../image/payCode.jpg' bindtap='previewImg'></image>
+  </swiper-item>
+    <swiper-item>
+    <image src='../../image/zxCode2.jpg' bindtap='previewImg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='../../image/payCode.jpg' bindtap='previewImg'></image>
+  </swiper-item>
+</swiper>
+<view>请截图保存至支付宝进行付款，并备注真实姓名以及下车点</view>

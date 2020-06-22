@@ -1,0 +1,47 @@
+<!--快捷上车页面-->
+  <!-- 乘车详细信息-->
+  <view class='mask' bindtap='hideModal'  animation="{{animationData}}" wx:if="{{showModalStatus}}">
+    <view class='mask-center'>
+      <swiper indicator-dots="true">
+        <swiper-item wx:for="{{order.photo_miaoshu}}"  wx:for-index="index" wx:key="unique" wx:for-item="miaoshu">
+          <image src='{{miaoshu}}'></image>
+        </swiper-item>
+      </swiper>   
+      <view class='description'>{{order.content}}</view>     
+    </view>
+  </view>
+  <!-- 乘车订单头 -->
+  <view class="order-detail">
+    <view>
+      <image class='bus-sign' src='{{order.photo}}'></image>
+    </view>    
+    <view class='header-right'>
+      <view class='title'>{{order.name}}</view>
+      <view class='bus-detail'>{{order.carnum}} {{order.date}} {{order.time}}</view>
+      <view class='detail-list'>
+        <image src='../../image/get-on.png' class='icon'></image>
+        <view class='detail-text'>{{order.start_name}}</view>
+      </view>
+      <view class='detail-list'>
+        <image src='../../image/get-off.png' class='icon'></image>
+        <view class='detail-text'>{{order.end_list[indexs].name}}</view>
+      </view>
+      <view class='hint'>
+          <image src='../../image/bus-detail.png' class='bus-photo' bindtap='showModal'></image>
+          <image src='../../image/phone.png' id="{{order.phone}}" bindtap='getphone'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 地图 --> 
+  <map wx:if="{{!showModalStatus}}" id="detail-map" scale="18"  show-location='true' longitude="{{longitude}}" latitude="{{latitude}}" markers='{{marker}}' polyline='{{polyline}}' circles='{{circles}}'>
+    <button wx:if="{{is_sign_in == 0}}" class='sign-in' type='warn' bindtap='sign_in' >签到</button>
+    <button wx:else class='sign-in' type='warn' data-index="{{indexs}}" bindtap= 'order_detail'>评价</button>
+    <button class='sign-in' type='warn' hidden='{{qiandaoanniu}}'  bindtap='gotoStartAddress'>去到出发点</button>
+    <cover-view class="user-location" bindtap='backUserLocation'  >
+          <cover-image class="map-img" src="../../image/mylocation.png" />
+    </cover-view>
+  </map>
+
+
+
+

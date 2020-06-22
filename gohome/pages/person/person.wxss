@@ -1,0 +1,70 @@
+/* pages/personage/personage.wxss */
+page {
+  background: #eee;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200rpx;
+  width: 100%;
+  background: white;
+}
+.rahmen {
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20rpx 20rpx 10rpx 30rpx;
+  width: 150rpx;
+  height: 150rpx;
+  background: rgb(247, 236, 236);
+}
+.userName {
+  margin-top: 15rpx;
+  width: 70%;
+  line-height: 170rpx;
+  margin-left:50rpx; 
+}
+.user-subfield {
+  padding: 10rpx 30rpx;  
+  background: white;
+  margin-top:10rpx; 
+}
+.subfield {
+  position: relative;
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #eee;
+}
+.subfield-bottom{
+  position: relative;
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+}
+.my-icon {
+  margin: 20rpx 20rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+.title {
+  margin: auto 30rpx;
+  font-size: 30rpx;
+}
+.details {
+  position: absolute;
+  top: 35rpx;
+  right: 50rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.admin-subfield {
+  padding: 10rpx 30rpx;  
+  background: white;
+  margin-top:30rpx; 
+}
+.login-button {  
+  height: 50rpx;
+  width: 250rpx; 
+  font-size: 23rpx;
+}

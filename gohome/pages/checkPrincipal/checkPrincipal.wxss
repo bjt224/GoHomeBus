@@ -1,0 +1,47 @@
+/* pages/checkPrincipal/checkPrincipal.wxss */
+page {
+  background: #eee;
+}
+.message-block {
+  width: 90%;
+  border-radius: 20rpx;
+  background: white;
+  padding: 20rpx;
+  margin: auto;
+  margin-top: 10rpx;
+}
+.block-top {
+  border-bottom: 1rpx #eee dashed;
+  padding-bottom: 10rpx;
+}
+.block-list {
+  display: flex;
+  border-bottom: 1rpx #eee dashed;
+  padding: 20rpx 10rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+.profile-photo {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border: 1rpx #eee dashed;
+  margin-left: 40%;
+}
+.list-title {
+  width: 35%;
+}
+.list-detail {
+  width: 65%;
+}
+.intro {
+  text-align: left;
+}
+.call {
+  width: 60rpx;
+  height: 60rpx;
+}
+.block-list button {
+  width: 50%;
+  margin: 10rpx 20rpx;
+}

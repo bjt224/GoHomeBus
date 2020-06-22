@@ -1,0 +1,140 @@
+/* pages/sendOrder/sendOrder.wxss */
+page {
+  background: #eee;
+  padding-top:15rpx; 
+}
+.top-block {
+  padding: 10rpx;
+  margin: auto;
+  border-radius: 20rpx;
+  background: white;
+  width: 95%;
+}
+.line-right {
+  position: relative;
+  width: 70%;
+  text-align: center;
+}
+.line-detail {
+  display: flex;
+  padding-top: 10rpx;
+  margin: 20rpx 0rpx;
+  font-size: 35rpx;
+}
+.site {
+ position: relative;
+ width: 330rpx;
+ border-radius: 10rpx;
+ height: 100rpx;
+ margin-bottom: 10rpx;
+ padding: 20rpx;
+ border: 1rpx #999 solid;
+
+}
+.line-right-inp {
+  border-bottom: 1rpx #eee solid;
+  width: 380rpx;
+}
+.line-right text {
+  height: 45rpx;
+  color: #777;
+  display: block;
+  margin-bottom: 5rpx;
+  border-bottom: 1rpx #eee solid;
+  width: 350rpx;
+  padding: 0rpx 15rpx; 
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap; 
+}
+.line-right textarea {
+  position: relative;
+  border: 1rpx #eee solid;
+  width: 350rpx;
+  padding: 10rpx; 
+  height: 200rpx;
+  font-size: 30rpx;
+  text-align: left;
+}
+.words {
+  position: absolute;
+  bottom: 5rpx;
+  right:  10rpx;
+  color: #777;
+  font-size: 20rpx;
+}
+.site-text {
+  width: 250rpx;
+  border: 0rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap; 
+}
+.off-site-list {
+  position: relative;
+  display: flex;
+  color: #777;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+.off-site-list input {
+  position: absolute;
+  right: 0;
+  height: 20rpx;
+  font-size: 25rpx;
+  text-align: center;
+  width:250rpx;
+
+}
+.site-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 5rpx 15rpx;
+}
+.money {
+  margin-top: 10rpx;
+}
+.title {
+  width: 30%;
+  margin: 0rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.date {
+  position: absolute;
+  top: 0rpx;
+  right: 10rpx;
+  height: 40rpx;
+  width: 40rpx;
+  margin: 5rpx 10rpx 0rpx 100rpx;
+}
+.top-block button {
+  margin: 20rpx auto;
+  width: 85%;
+}
+radio {
+  margin-left: 50rpx; 
+}
+.radio-group {
+  text-align: left;
+  padding-left: 30rpx;
+}
+.add {
+  position: absolute;
+  right: 25rpx;
+  top: 0rpx;
+  height: 40rpx; 
+  width: 40rpx;
+}
+.icon-del {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+.add-photo {
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}

@@ -1,0 +1,31 @@
+<!-- 负责人申请 --> 
+<view class='bg'>
+  <form bindsubmit="apply_personal_submit" >
+    <view class="apply-information">
+      <view class='title'>车社名称：</view>
+       <view class="bus-name" name="busName" value='{{objectCarclub_info[index].carclubname}}'>{{index == carclub_length ? '请选择车社' : objectCarclub_info[index].carclubname}}</view>
+      <picker bindchange="bindPickerChange" value="{{index}}"  range="{{carclub_info}}">
+         <image src='../../image/down.png'></image>
+      </picker>
+    </view>
+    <view class='apply-information'>
+      <view class='title'>你的名称：</view>
+      <input name="name" placeholder='输入你的名称'></input> 
+    </view>
+    <view class='apply-information'>
+      <view class='title'>当前职业：</view>
+      <input name='identity' placeholder='输入您的当前职业'></input>
+    </view>
+    <view class='apply-information'>
+      <view class='title'>联系电话：</view>
+      <input name="phone" type="number" placeholder='输入您的联系电话'></input>
+    </view>
+    <view class='apply-information'>
+      <view class='title'>自我简介：</view>
+      <textarea name="introduction" placeholder='您的自我简介让别人对你产生信任！'></textarea>
+    </view>
+    <button form-type='submit' type='primary'>申请</button>
+  </form>
+</view>
+
+

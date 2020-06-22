@@ -1,0 +1,198 @@
+/* pages/orderDetail/orderDetail.wxss */
+.textCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wordLimit {
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap; 
+}
+page {
+  background: #eee;
+}
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 500rpx;
+}
+.block-detail {
+  position: relative; 
+  width: 90%;
+  border-radius:20rpx;
+  margin:auto;
+  background:white;  
+  padding: 10rpx;
+}
+.detail-top {
+  display: flex;
+  padding:  30rpx 5rpx 10rpx 20rpx;
+}
+.title {
+  font-size: 40rpx;
+  float: left;
+}
+.date{
+  position: absolute;
+  right: 20rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #777;
+}
+.block-user {
+  width: 93%;
+  background:white;  
+  border-radius:20rpx;
+  margin: 20rpx auto;
+}
+.passenger-title {
+  height: 80rpx;
+  border-bottom: 1rpx #7f76a3 solid;
+  font-size: 40rpx;
+  color: #7f76a3;
+}
+.passenger-title image {
+  height:40rpx;
+  width: 35rpx;
+  margin-right: 20rpx;
+}
+.item-block {
+  position: absolute;
+  top: 0rpx;
+  z-index: 5;
+  display: flex;
+  width: 860rpx;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  transition: left 0.4s ease-in-out;
+  margin-bottom: 10rpx;
+}
+.passenger-list {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 80rpx;
+  margin: auto;
+  border-bottom: 1rpx #eee solid;
+}
+.refund {
+  z-index: 4;
+  overflow: hidden;
+  background: red;
+  width: 160rpx;
+  height: 80rpx;
+  color: white;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.passenger-item {
+  width: 25%;
+  font-size: 30rpx;
+}
+.passenger-item1 {
+  width: 21%;
+  font-size: 30rpx;
+}
+.phone {
+  position: absolute;
+  right: 0rpx;
+  top: 12rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.call {
+  float:right; 
+  width: 35rpx;
+  height: 35rpx;
+  padding: 10rpx;
+}
+.bus-detail {
+  display: inline-block;
+  width: 95%;
+  padding: 0rpx 20rpx;
+  margin-bottom: 10rpx;
+}
+.plateNumber {
+  float: right;
+  margin-right:30rpx; 
+  font-size: 30rpx;
+  margin-top: 6rpx;
+  color: #777;
+}
+.detail-list {
+  display: flex;
+  padding:0rpx 10rpx 20rpx 10rpx;
+  font-size: 35rpx;
+  margin-left: 35rpx;
+  border-left: 5rpx #7f76a3 solid;
+}
+.start-site {
+  width: 26rpx;
+  height: 26rpx;
+  border-radius:50%; 
+  background: #7f76a3;
+  margin: 0rpx 20rpx 0rpx -24rpx;
+}
+.start-site-text {
+  font-size: 22rpx;
+  color: #777;
+}
+.detail-text {
+  padding-top: 5rpx;
+  font-size: 30rpx;
+  width: 75%;
+}
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  margin: 10rpx 20rpx 0rpx -27rpx;
+}
+.block-bottom {
+  margin-top: 20rpx; 
+  display: flex;
+}
+.ratio {
+  position: relative;
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  background: #333;
+  margin: 10rpx 20rpx 0rpx 30rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+.sell {
+  width: 50rpx;
+  position: absolute;
+  top: 15rpx;
+  left: 45rpx;
+  border-bottom:5rpx rgb(216, 214, 214) solid;
+  padding-bottom: 5rpx; 
+  color: green;
+}
+.amount {
+  width: 50rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 45rpx;
+  color: orange;
+}
+.money {
+  width: 80%;
+  font-size: 30rpx; 
+  color: #777;
+}
+.univalence {
+  position: absolute;
+  right: 20rpx;
+  font-size: 30rpx;
+}
+button {
+  width: 90%;
+}

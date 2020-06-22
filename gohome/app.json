@@ -1,0 +1,61 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/ongoingOrder/ongoingOrder",
+    "pages/pay/pay",
+    "pages/manageBus/manageBus",
+    "pages/orderDetail/orderDetail",
+    "pages/privateOrder/privateOrder",
+    "pages/applyBus/applyBus",
+    "pages/orderList/orderList",
+    "pages/historyOrderDetail/historyOrderDetail",
+    "pages/sendOrder/sendOrder",
+    "pages/feedback/feedback",
+    "pages/person/person",
+    "pages/personProject/personProject",
+    "pages/managePrincipal/managePrincipal",
+    "pages/checkPrincipal/checkPrincipal",
+    "pages/orderHistory/orderHistory",
+    "pages/applyPrincipal/applyPrincipal",
+    "pages/buyTicket/buyTicket",
+    "pages/busIntro/busIntro",
+    "pages/principalDetail/principalDetail",
+    "pages/userOrderDetail/userOrderDetail",
+    "pages/collection/collection",
+    "pages/service/service",
+    "pages/setting/setting"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#b67bb1",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "东莞同乡会",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#7e74a9",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/index1.png",
+        "selectedIconPath": "image/index2.png"
+      },
+      {
+        "pagePath": "pages/privateOrder/privateOrder",
+        "text": "订单",
+        "iconPath": "image/order1.png",
+        "selectedIconPath": "image/order2.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "image/mine1.png",
+        "selectedIconPath": "image/mine2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

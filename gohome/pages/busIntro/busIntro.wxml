@@ -1,0 +1,41 @@
+<!--巴士简介-->
+<view class=" message-block">
+  <view class='block-top'>
+    <image src="{{carclub.logo}}" class='logo'></image>
+    <view class="clubname">{{carclub.carclubname}}</view>
+  </view>
+  <view class="row">
+    <view class='row-title'>主要负责人：</view>
+    <view class='detail'>{{carclub.username}}</view>
+  </view>
+  <view class='row'>
+    <view class='row-title'>联系电话 ：</view>
+    <view class='detail'>{{carclub.phone}}</view>
+  </view>
+</view>
+<view class='message-block'>
+  <view class="title">
+    <text>车 社 简 介</text>
+  </view>
+  <view  class='intro' >{{carclub.summary}}</view>
+</view>
+<view class='message-block'>
+  <view class="title">
+    <text>主 要 站 点</text>
+  </view>
+   <view  class='detail-block' wx:if='{{carclub.lists.lenght != 0}}'>
+    <view class='row-block' wx:for="{{carclub.lists}}" wx:key='{{index}}' >
+      <view class="{{index %2 ==0 ?'green' : 'orange'}}"></view>
+      <view class='row-text' bindtap='choiceSite' data-id='{{index}}' >{{item.name}}</view>   
+    </view>
+    <view style='clear:both;'></view>
+  </view>
+</view>
+<view class='message-block'>
+  <view class="title">负责人列表</view>
+    <view  wx:for="{{admin}}"  wx:for-index="index" wx:key="unique" class='leader-list' data-id='{{item._id}}' bindtap='navigateToDetail'>
+      <image class='photo' src='{{item.photo}}'></image>
+      <view class='leader-name'>{{item.name}}</view>
+      <image class='detail-logo' src='../../image/detail.png'></image>
+    </view>
+</view>

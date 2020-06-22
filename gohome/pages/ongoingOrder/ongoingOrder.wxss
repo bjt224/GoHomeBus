@@ -1,0 +1,89 @@
+/* pages/ongoingOrder/ongoingOrder.wxss */
+
+page {
+  background: #eee;
+  padding: 10rpx;
+}
+.order-block { 
+   position: relative;
+  width: 97%;
+  height: 210rpx;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.activity-block{
+background: white;
+  position: absolute;
+  top: 0rpx;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index:5;
+  transition:left 0.4s ease-in-out;
+}
+.block-left {
+  float: left;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.block-left image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.block-right {
+  float: right;
+  width: 1000rpx;
+  height: 100%;
+}
+.refund {
+  position: absolute;
+  right: 0rpx;
+  z-index: 4;
+  background: red;
+  width: 210rpx;
+  height: 100%;
+  color: white;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bus-name {
+  font-size: 35rpx;
+  margin-left:15%; 
+}
+.title-detail image {
+  height: 20rpx;
+  width: 20rpx;
+  float: right;
+  margin: 23rpx 30rpx 0rpx 0rpx;
+}
+.status {
+  font-size: 25rpx;
+  color: #777;
+  float: right;
+  margin: 15rpx 20rpx 0rpx 0rpx;
+}
+.detail-list {
+  display: flex;
+}
+.detail-text{
+  width: 450rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap; 
+  font-size: 25rpx;
+  color: #777;
+  padding-bottom: 5rpx;
+}
+.icon{
+  width: 18rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  margin: 5rpx 20rpx 0rpx 20rpx;
+}

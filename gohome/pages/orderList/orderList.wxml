@@ -1,0 +1,57 @@
+<!-- 车社发车列表 -->
+<view class='header' >
+  <image src='{{logo}}' bindtap='navto_info'  class='logo'></image>
+  <view bindtap='navto_info'>{{name}}</view>
+  <image src='../../image/{{markStatus}}.png' class='marks' bindtap='changeMark'></image>
+</view>
+<view wx:if="{{order.length <=0}}">
+   <view class='none-block'>
+        <image src='../../image/clogo.png'></image>
+      <view class='none-text'>    
+        <view>暂无</view>
+        <view class='text-word'>订单</view>
+      </view>
+      <view class='toindex'>去首页看看</view>
+      <button bindtap='toIndex'>首页</button>
+  </view>
+</view>
+<view wx:else>
+  <block wx:for="{{order}}"  wx:for-index="index" wx:key="unique" wx:for-item="order">
+    <view  class='order-block' bindtap='onChangeShowState' data-id="{{index}}">
+      <view class='block-top'>
+        <view class='time'>
+          <image src='../../image/calendar.png'class="calendar"></image>
+          <text>{{order.date}} {{order.time}} </text>
+        </view>
+        <view class='site'>
+            <image src='../../image/get-on.png' class='site-icon'></image>
+            <text>{{order.start_name}}</text>
+        </view>
+        <view class='site'>
+            <image src='../../image/get-off.png' class='site-icon'></image>
+            <text>{{order.end_list[0].name}}</text>
+        </view>  
+        <view class='pricing'>
+          <view class='rmb'>￥</view>
+          <view class='money'>{{order.end_list[0].jiage}}</view>
+          <view class='pricing-text'>起</view>
+        </view>
+      </view>
+      <view class="block-bottom{{curNav != index ? '' : '-hide'}}" >
+        <view class='site-list'>{{order.end_list[0].name}}</view>
+        <view  class="saleMessage">剩余票数：{{order.amount - order.soldticket}}</view>
+      </view>
+      <view class="site-detail{{curNav == index ? '' : '-hide'}}">
+        <view wx:for="{{order.end_list}}"  wx:for-index="siteindex" wx:key="unique" wx:for-item="end" class='site-detail-list'>
+          <image class='destination-icon' src='../../image/destination.png'></image>
+          <view class="destination">{{end.name}}</view>
+          <view class='pricing-detail' >
+            <view class='rmb'>￥</view>
+            <view class='money'>{{end.jiage}}</view>
+          </view>
+          <view class='buy' bindtap='tap' id="{{order._id}}----{{siteindex}}" data-index='{{index}}' data-oid='{{order._id}}'>预订</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

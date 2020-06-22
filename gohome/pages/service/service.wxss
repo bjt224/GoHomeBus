@@ -1,0 +1,19 @@
+/* pages/service/service.wxss */
+page {
+  height: 100%;
+  background: #eee;
+}
+image{
+  width: 500rpx;
+  height: 700rpx;
+  margin: auto;
+  margin-left:120rpx;
+  margin-top: 100rpx;
+  margin-bottom: 10rpx
+}
+swiper{
+  height: 80%;
+}
+view{
+  text-align: center;
+}

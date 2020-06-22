@@ -1,0 +1,172 @@
+/* pages/manageBus/manageBus.wxss */
+page {
+  background: #eee;
+}
+.message-block  {
+  position: relative;
+  background: white;
+  width: 90%;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  margin: auto;
+  margin-top:10rpx; 
+  margin-bottom:20rpx; 
+}
+.block-top {
+  border-bottom: 1rpx #eee dashed;
+  display: flex;
+}
+.block-top .change {
+  right: 20rpx;
+  top: 60rpx;
+}
+.logo {
+  border-radius: 50%;
+  border: 1rpx #eee dashed;
+  height: 120rpx;
+  width: 120rpx;
+  margin-bottom: 10rpx;
+  margin-left: 150rpx;
+}
+.clubname {
+  font-size: 45rpx;
+  margin: 25rpx;
+}
+.change {
+  position: absolute;
+  height: 40rpx;
+  width: 40rpx;
+}
+.row {
+  display: flex;
+  padding: 20rpx;
+  height: 50rpx;
+}
+.row-title {
+  width: 40%;
+}
+.detail {
+  width: 50%;
+  border-bottom: 1rpx #eee solid;
+  text-align: center; 
+}
+.title {
+  text-align: center;
+  font-size: 40rpx;
+  padding-bottom: 20rpx;
+  font-weight: bold;
+  border-bottom: 1rpx #eee dashed; 
+}
+.title .change {
+  top: 30rpx;
+  right: 20rpx;
+}
+.intro {
+  /* border: 1rpx #eee solid; */
+  margin: auto;
+  padding: 10rpx;
+  width: 80%;
+  /* height: 220rpx; */
+}
+.select {
+  display: flex;
+}
+.tab {
+  float: left;
+  padding: 10rpx 0; 
+  width: 50%;
+  text-align: center;
+}
+.tabBorer {
+  border-bottom: 1px solid #f00;
+  color: #f00;
+}
+.leader-list {
+  position: relative;
+  display: flex;
+  height: 130rpx;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.photo {
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 50%;
+  border: 1rpx #eee dashed;
+  margin-top: 10rpx;
+}
+.leader-name {
+  font-size: 45rpx;
+  margin:40rpx 0rpx 0rpx 120rpx; 
+}
+.detail-logo {
+  position: absolute;
+  right: 20rpx;
+  top: 70rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.row-block{
+  position: relative;
+  height: 70rpx;
+  width: 50%;
+  display: flex;
+  float: left;
+  font-size: 25rpx;
+}
+.row-text {
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap; 
+  width: 220rpx;
+  border-bottom: 1rpx #eee solid;
+  margin-top: 20rpx;
+}
+.green {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  margin: 35rpx 30rpx 0rpx 25rpx;
+  background: greenyellow;
+}
+.orange {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  margin: 30rpx 30rpx 0rpx 25rpx;
+  background: orange;
+}
+.add {
+  position: absolute;
+  right: 30rpx;
+  top: 5rpx;
+  height: 30rpx;
+  width: 30rpx;
+  padding: 30rpx;
+}
+.delete {
+  position: absolute;
+  right: 0rpx;
+  top: 15rpx;
+  width: 20rpx;
+  height: 20rpx;
+  padding: 20rpx;
+}
+.save-site {
+  margin-top: 30rpx;
+}
+.leader-name button {
+  width: 100rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+}
+swiper {
+  height: 160rpx;
+}
+
+
+
+
+
+
+

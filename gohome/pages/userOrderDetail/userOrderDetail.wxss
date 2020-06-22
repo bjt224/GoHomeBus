@@ -1,0 +1,133 @@
+/* pages/userOrderDetail/userOrderDetail.wxss */
+page {
+  background: #eee;
+}
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 500rpx;
+}
+.block-detail {
+  position: relative; 
+  width: 90%;
+  border-radius:20rpx;
+  margin:auto;
+  margin-bottom: 20rpx;
+  background:white;  
+  padding: 10rpx;
+}
+.detail-top {
+  display: flex;
+  padding:  30rpx 5rpx 10rpx 20rpx;
+}
+.detail-top text {
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  font-size: 35rpx;
+}
+.date {
+  font-size: 50rpx;
+  margin-right: 20rpx;
+}
+.status {
+  position: absolute;
+  right: 150rpx;
+  top: 30rpx;
+}
+.bus-icon {
+  height: 50rpx;
+  width: 50rpx;
+  margin: 5rpx 20rpx 0rpx 20rpx;
+}
+.bus-detail {
+  display: flex;
+}
+.plateNumber {
+  font-size: 35rpx;
+  margin-top: 6rpx;
+}
+.detail-list {
+  display: flex;
+  padding: 10rpx;
+  font-size: 35rpx;
+}
+.site-icon{
+  width: 18rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  margin: 10rpx 40rpx 0rpx 20rpx;
+}
+.list-block {
+  position: relative;
+  width: 87%;
+  border-radius: 20rpx;
+  margin: auto;
+  margin-top: 20rpx;
+  background: white;
+  padding: 20rpx;
+}
+.title {
+  display: flex;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.title image {
+  height: 40rpx;
+  width: 40rpx;
+  margin: 10rpx 20rpx;
+}
+.list-detail {
+  border-top: 1rpx dashed #999;
+  margin-left: 70rpx;
+  margin-top: 15rpx;
+  padding-top: 10rpx;
+}
+.principal-detail text {
+  font-size: 35rpx;
+}
+.principal-name {
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  color: #777;
+}
+.principal-block {
+  display: flex;
+}
+.principal-block image{
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+}
+.call {
+  position: absolute;
+  right: 30rpx;
+  top: 100rpx;
+  height: 70rpx;
+  width: 70rpx;
+}
+.evaluate-detail {
+  display: flex;
+  border-top: 1rpx dashed #999;
+  margin-left: 70rpx;
+  margin-top: 15rpx;
+  padding-top: 10rpx;
+}
+.evaluate {
+  height: 120rpx;
+  width: 120rpx;
+}
+.detail-block {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 40rpx;
+  text-align: center;
+}
+.detail-block text {
+  display: block;
+  font-size: 30rpx;
+  color: #777;
+}
+.save {
+  margin-left: 35%;
+}

@@ -1,0 +1,36 @@
+<!-- 填写订单 -->
+<image class='bg' src='../../image/bg.png'></image> 
+<view class='block-detail'>
+  <view class='detail-top'>
+    <view class='date'>10月31号</view>
+    <view class='date'>14:48</view>
+    <text>出发</text>
+  </view>
+  <view class='bus-detail'>
+    <image src='../../image/plateNumber.png' class='bus-icon'></image>
+    <view class='plateNumber'>{{order_info.carnum}}</view>
+  </view>
+  <view class='detail-list'>
+    <image src='../../image/get-on.png' class='icon'></image>
+    <view class='detail-text'>{{order_info.start_name}}</view>
+  </view>
+  <view class='detail-list'>
+    <image src='../../image/get-off.png' class='icon'></image>
+    <view class='detail-text'>{{order_info.end_list[xianlu_i].name}}</view>
+  </view>
+</view>
+<view class='block-message'>
+  <view class='message-title'>乘客信息</view>
+    <view class='message-list'>
+      <view>手机号码:</view>
+      <input type='number' placeholder='请输入手机号码' bindchange="UserPhone"></input>
+    </view>
+    <view class='message-list'>
+      <view>本人姓名:</view>
+      <input  placeholder='这位大侠，怎么称呼' bindchange="UserNickname"></input>
+    </view>    
+</view>
+<view class='block-bottom'>
+  <view class='total'>订单总额 ￥{{order_info.end_list[xianlu_i].jiage}}</view>
+  <view class='sub' bindtap='user_form'>提交订单</view>
+</view>

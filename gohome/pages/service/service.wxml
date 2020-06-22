@@ -1,0 +1,11 @@
+<!-- 联系客服页面 -->
+<swiper indicator-dots='true' autoplay='true' indicator-active-color="#b67bb1">
+  <swiper-item>
+    <image src='../../image/QRcode.jpg'></image>
+    <view>技术客服</view>
+  </swiper-item>
+  <swiper-item>  
+    <image src='../../image/zxCode2.jpg'></image>
+    <view>车社客服</view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,75 @@
+<!-- 主页 -->
+<!-- 导入数字处理文件 -->
+
+<wxs module="filters">
+  var filters = {
+    toFix: function (value) {
+      return value.toFixed(0)//此处2为保留两位小数
+    }
+  }
+  module.exports = {
+    toFix: filters.toFix
+  }
+</wxs>
+<!-- 选择地址 -->
+ <view class='header' bindtap='chooseLocation'> 
+  <view class='header-text'>{{location}}</view><!-- 自动定位 -->
+  <image class="header-down" src="../../image/down.png"></image> 
+  <view class='header-v-icon'>
+    <image src='../../image/search.png' class='header-icon' ></image>
+    <input class='header-input' placeholder='{{input_placeholder}}'></input>
+  </view>  
+</view>
+<!--地图-->
+<map id="myMap"  longitude="{{longitude}}" latitude="{{latitude}}"  scale="{{scale}}" bindregionchange="showArchitecture" show-location class="map" bindcallouttap='calloutTap' markers='{{markers}}'>
+  <cover-view class="map-centre" >
+        <cover-image class="map-img" src="../../image/map-centre.png" />
+  </cover-view>
+  <cover-view class="user-location" bindtap='backUserLocation' >
+        <cover-image class="map-img" src="../../image/mylocation.png" />
+  </cover-view>
+</map> 
+<!-- 热门车社 -->
+<view class='hot-station'>
+  附近车社
+  <!-- <image src='../../image/bus.png'></image>
+  <input class='hot-bus-text' placeholder='请输入目的地...'></input> -->
+</view>
+<!-- 车社展示栏  -->
+<block wx:if="{{!status}}">
+  <block wx:for="{{carclub_all}}"  wx:for-index="index" wx:key="unique">
+    <view class='bus-option' bindtap='navTOinfo' data-id="{{item._id}}">
+      <view>
+        <image src='{{item.logo}}' class='bus-mark'></image> <!--车社标志 -->
+      </view>
+      <view class='bus-detail'>
+        <view class='bus-name'>{{item.carclubname}}</view>
+        <view class='bus-content'>{{item.commentnum-1}}/{{item.num}}  |  已评人次/服务人次</view>
+        <view class='hot-path-title'>
+          <view>热门站点</view>
+          <image src='../../image/hot.png' class='hot'></image>
+        </view>
+        <view class='site-list'>
+          <text>{{item.city}}</text>
+        </view>
+        <view class='grade'>
+          <image src='../../image/{{index+1}}.png'></image>
+          <text>体验指数</text>
+          <view class='cx-index'>{{filters.toFix(item.taste/item.commentnum)}}%</view>
+        </view> 
+      </view>
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <view class='show-list'>
+    <text class='block-text'>查看附进车社</text> 
+  </view>
+  <view class='report'>
+    <text class='block-text'>快捷签到</text>
+  </view>
+</block>
+<view class='pay'>
+  <image src='../../image/zxCode.jpg' bindtap='toPay'></image>
+  <view>点击付款</view>
+</view>
